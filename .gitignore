@@ -1,0 +1,8 @@
+# Ignore Intellij Idea specific directories
+.idea
+*.iml
+*.iws
+*.ipr
+
+# Ignore distribution folder
+dist
