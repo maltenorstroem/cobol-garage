@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION. 
+       PROGRAM-ID. INPUTTST.
+       AUTHOR. MALTENORSTROEM.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 N PIC 9(2) VALUE 0.
+       01 I PIC 9(2) VALUE 0.
+       01 NAME-IN.
+       02 NAME PIC X(10) OCCURS 10 times.
+       01 KEY-IN PIC X VALUE SPACE.
+       PROCEDURE DIVISION.
+       P-1.
+           DISPLAY "HOW MANY STUDENTS?".
+           ACCEPT N.
+           PERFORM GET-DATA-PROC N TIMES.
+           MOVE 0 to I.
+           PERFORM DISPLAY-DATA-PROC N TIMES.
+           STOP RUN.
+       GET-DATA-PROC.
+           ACCEPT NAME(I).
+           ADD 1 TO I.
+
+       DISPLAY-DATA-PROC.
+           DISPLAY NAME(I).
+           ADD 1 TO I.
